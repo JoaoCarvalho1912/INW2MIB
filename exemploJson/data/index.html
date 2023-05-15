@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <title>Exemplo JSON SERVER</title>
+ <script src="app.js"></script>
+</head>
+<body>
+ <h2>Lista de produtos</h2>
+ <div id="conteudo"></div>
+ <script>
+ const url = 'http://localhost:3000/produtos'
+ // buscando os dados
+ fetch(url)
+ .then(response => response.json())
+ .then(json => {
+ const div = document.getElementById("conteudo");
+ div.innerText = JSON.stringify(json)
+ })
+ 
+ </script>
+ <center>
+    <h2>Lista de produtos</h2>
+    <div id="app"></div>
+    </center> 
+   
+</body>
+</html>
