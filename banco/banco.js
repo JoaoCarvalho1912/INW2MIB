@@ -20,6 +20,9 @@ class conta{
                 console.log("Limite atual ",this.limite)
         }
             else if (this.saldo<=0 && valor>this.limite){
+                console.log("Não foi possível realizar. Fora do limite.")
+            }
+            else if (valor>this.saldo){
                 console.log("Não foi possível realizar. Saldo insuficiente.")
             }
             else if(valor<=0){
