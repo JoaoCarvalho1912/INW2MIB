@@ -7,14 +7,13 @@ class conta{
         this.ativo=ativo
     }
     ativar(){
-        this.ativo = true;}
+        this.ativo = true;
+    }
     mostrarsaldo(){
         console.log("O saldo atual é de: ",this.saldo)
     }
     debito(valor){
         if(this.ativo=true){
-
-        
             if (valor>this.saldo){
                 console.log("Não foi possível realizar. Saldo insuficiente.")
             }
@@ -40,14 +39,32 @@ class conta{
         }
     }
 }
+C1 = new conta (1,'111.111.222-03',0,true)
 
-class especial extends conta(numero,cpf,saldo,ativo){
-    constructor(limite){
-        super(numero,cpf,saldo,ativo)
-        this.limite = limite
+
+class especial extends conta{
+    constructor(numero,cpf,saldo,ativo,limite){
+        super(numero,cpf,saldo,ativo,limite)
+        this.limite = limite;
     }
+    debito(limite,saldo,valor){
+        for(saldo<=0;valor<=limite;){
+        if (saldo<=0 && valor<=limite){
+                    limite -= valor
+                    console.log("Limite atual ",limite)
+            }
+        else if (saldo<=0 && valor>limite){
+                    console.log("Não foi possível realizar. Fora do limite.")
+                }
+            }
 }
-C1 = new especial(1000)
+mostrarLimite(){
+    console.log('Limite disponível:', this.limite)
+}
+}
+
+C1e = new especial(this.numero,this.cpf,0,true,1000)
+
 // PROGRAMA PRINCIPAL   
 
 const leia = require("prompt-sync")()
@@ -61,19 +78,10 @@ for (let x=1; x<=10; x++) {
     if (op=="C") {
         valor = parseInt(leia("Digite o valor para crédito: "))
         C1.credito(valor)
-    } else if (op = "D") {
+    } else if (op=="D") {
         valor = parseInt(leia("Digite o valor para débito: "))
-        C1.debito(valor)
+        C1e.debito(valor)
     }
     C1.mostrarsaldo()
-}
-C1.debito()
-for(saldo==0;valor<limite;){
-    if (this.saldo<=0 && valor<=this.limite){
-                this.limite -= valor
-                console.log("Limite atual ",this.limite)
-        }
-    else if (this.saldo<=0 && valor>this.limite){
-                console.log("Não foi possível realizar. Fora do limite.")
-            }
+    C1e.mostrarLimite()
 }
