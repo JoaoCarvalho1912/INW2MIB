@@ -1,11 +1,10 @@
 
 class conta{
-    constructor(numero,CPF,saldo,ativo,limite){
+    constructor(numero,CPF,saldo,ativo){
         this.numero=numero
         this.CPF=CPF
-        this.saldo = saldo
-        this.ativo = ativo
-        this.limite = limite
+        this.saldo=saldo
+        this.ativo=ativo
     }
     ativar(){
         this.ativo = true;}
@@ -15,14 +14,8 @@ class conta{
     debito(valor){
         if(this.ativo=true){
 
-            if (this.saldo<=0 && valor<=this.limite){
-                this.limite -= valor
-                console.log("Limite atual ",this.limite)
-        }
-            else if (this.saldo<=0 && valor>this.limite){
-                console.log("Não foi possível realizar. Fora do limite.")
-            }
-            else if (valor>this.saldo){
+        
+            if (valor>this.saldo){
                 console.log("Não foi possível realizar. Saldo insuficiente.")
             }
             else if(valor<=0){
@@ -48,13 +41,19 @@ class conta{
     }
 }
 
+class especial extends conta(numero,cpf,saldo,ativo){
+    constructor(limite){
+        super(numero,cpf,saldo,ativo)
+        this.limite = limite
+    }
+}
+C1 = new especial(1000)
 // PROGRAMA PRINCIPAL   
 
 const leia = require("prompt-sync")()
     let numero = parseInt(leia("Digite o número da conta: "))
     let cpf = leia("Digite o seu CPF: ")
     let op = ""
-let C1 = new conta (numero,cpf,0,false,1000)
 
 C1.ativar()
 for (let x=1; x<=10; x++) {
@@ -67,4 +66,14 @@ for (let x=1; x<=10; x++) {
         C1.debito(valor)
     }
     C1.mostrarsaldo()
+}
+C1.debito()
+for(saldo==0;valor<limite;){
+    if (this.saldo<=0 && valor<=this.limite){
+                this.limite -= valor
+                console.log("Limite atual ",this.limite)
+        }
+    else if (this.saldo<=0 && valor>this.limite){
+                console.log("Não foi possível realizar. Fora do limite.")
+            }
 }
