@@ -44,26 +44,24 @@ C1 = new conta (1,'111.111.222-03',0,true)
 
 class especial extends conta{
     constructor(numero,cpf,saldo,ativo,limite){
-        super(numero,cpf,saldo,ativo,limite)
+        super(numero,cpf,saldo,ativo);
         this.limite = limite;
     }
-    debito(limite,saldo,valor){
-        for(saldo<=0;valor<=limite;){
-        if (saldo<=0 && valor<=limite){
-                    limite -= valor
-                    console.log("Limite atual ",limite)
+    usarLimite(valor){
+        if (this.saldo<=0 && valor<=this.limite){
+            console.log("Limite atual ",(this.limite -= valor) )
             }
-        else if (saldo<=0 && valor>limite){
+        else if (this.saldo <= 0 && valor > this.limite){
                     console.log("Não foi possível realizar. Fora do limite.")
                 }
-            }
+        else if(valor = 0){
+            console.log("Valor nulo")
+        }
 }
 mostrarLimite(){
     console.log('Limite disponível:', this.limite)
 }
 }
-
-C1e = new especial(this.numero,this.cpf,0,true,1000)
 
 // PROGRAMA PRINCIPAL   
 
@@ -71,17 +69,18 @@ const leia = require("prompt-sync")()
     let numero = parseInt(leia("Digite o número da conta: "))
     let cpf = leia("Digite o seu CPF: ")
     let op = ""
-
-C1.ativar()
+    let C1e = new especial(numero,cpf,0,true,1000)
+C1e.ativar()
 for (let x=1; x<=10; x++) {
     op = leia("Qual operação você deseja efetuar ? Digite C para Credito e D para Debito ")
     if (op=="C") {
         valor = parseInt(leia("Digite o valor para crédito: "))
-        C1.credito(valor)
+        C1e.credito(valor)
     } else if (op=="D") {
         valor = parseInt(leia("Digite o valor para débito: "))
         C1e.debito(valor)
     }
-    C1.mostrarsaldo()
+    C1e.usarLimite(valor)
+    C1e.mostrarsaldo()
     C1e.mostrarLimite()
 }
