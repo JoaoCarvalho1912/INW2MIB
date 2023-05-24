@@ -1,4 +1,4 @@
-
+                                            // IGNORE !! 
 class conta{
     constructor(numero,CPF,saldo,ativo){
         this.numero=numero
@@ -39,9 +39,9 @@ class conta{
         }
     }
 }
-C1 = new conta (1,'111.111.222-03',0,true)
 
 
+                                        // CLASSE ESPECIAL 
 class especial extends conta{
     constructor(numero,cpf,saldo,ativo,limite){
         super(numero,cpf,saldo,ativo);
@@ -51,9 +51,12 @@ class especial extends conta{
         if (this.saldo<=0 && valor<=this.limite){
             console.log("Limite atual ",(this.limite -= valor) )
             }
-        else if (this.saldo <= 0 && valor > this.limite){
-                    console.log("Não foi possível realizar. Fora do limite.")
-                }
+        else if (valor>this.saldo && valor<=this.limite){
+                    let resto = (this.saldo -= valor);
+                    this.saldo = 0;
+                    this.limite -= -(resto);
+                console.log("Limite restante: ", this.limite)
+        }
         else if(valor = 0){
             console.log("Valor nulo")
         }
