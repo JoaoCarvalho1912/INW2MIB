@@ -1,0 +1,26 @@
+{
+    "acessorios":[
+        {
+            "id":1,
+            "descricao":"Prancha Azul SURFSHOPP tamanho único",
+            "estoque":100,
+            "valor":200,
+            "imagem": "img/prancha.jpg"
+        },
+        {
+            "id":2,
+            "descricao":"Quilha SURFSHOPP",
+            "estoque":200,
+            "valor":160,
+            "imagem": "img/Quilha.jpg"
+        },
+        {
+            "id":3,
+            "descricao":"Kit manutenção para prancha SURFSHOPP",
+            "estoque":210,
+            "valor":160,
+            "imagem": "img/kit.jpg"
+        }
+    ]
+
+}
