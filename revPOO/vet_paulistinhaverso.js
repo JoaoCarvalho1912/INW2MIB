@@ -1,4 +1,4 @@
-const leia = require("prompt-sync");
+const leia = require("prompt-sync")();
 
 //vetor e array
 var equipes = ["SFC-AP","SPFC-AP","SCCP-AL","SEP-RN"]

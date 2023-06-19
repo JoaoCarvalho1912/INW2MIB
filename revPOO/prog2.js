@@ -6,8 +6,9 @@
     4 - funciona até ele digitar num<0
     5 - O total desconsidera o num negativo */
 
-    const leia = require("prompt-sync");
-    let numero = parseFloat(leia(console.log("Insira um número qualquer")));
+                    //TERMINAR 
+    const leia = require("prompt-sync")();
+    let numero = parseFloat(leia("Insira um número qualquer"));
     let total = 0;
     let maior = 0;
     let qtd = 0;
@@ -16,7 +17,9 @@
         console.log(numero);
     }
     while(numero<0)
-        total = numero+=numero
+        total = numero += numero;
         console.log(total);
-        maior = numero>numero;
+        if(numero>numero){
+        console.log("Maior número digitado: ", numero)
+        };
         console.log(maior);
