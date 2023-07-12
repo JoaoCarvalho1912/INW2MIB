@@ -2,8 +2,8 @@ body,html{
     width: 100%;
     height: 100%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #fff758;
-}
+    background-image: linear-gradient(#f9f37f, #6b90c4);}
+
 /* width */
 ::-webkit-scrollbar {
     width: 8px;
@@ -59,7 +59,7 @@ section:hover{
     border-bottom: #bdb7ff 1px solid ;
 }
 h5{
-    color: #20541d
+    color: #454d45
 }
 h2{
     color: #03044b;
