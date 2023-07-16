@@ -23,6 +23,7 @@ body,html{
   ::-webkit-scrollbar-thumb:hover {
     background:#334FCC;
   }
+  @media only screen and (min-width: 778px) {
 header{
     padding: 5%;
     height: 15%; 
@@ -66,4 +67,11 @@ h2{
 }
 li{
     font-size: 20px;
+}
+}
+@media screen {
+    
+}
+@media only screen and (max) {
+    
 }
