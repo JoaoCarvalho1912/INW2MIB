@@ -23,12 +23,18 @@ body,html{
   ::-webkit-scrollbar-thumb:hover {
     background:#334FCC;
   }
-  @media only screen and (min-width: 778px) {
+  @media only screen and (min-width: 543px) {
 header{
     padding: 5%;
     height: 15%; 
     width: 100%;
     margin-bottom: 2%;
+}
+#S{
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
 }
 nav{
     display: flex;
@@ -72,6 +78,25 @@ li{
 @media screen {
     
 }
-@media only screen and (max) {
+@media only screen and (max-width: 542px ) {
+    #S,header{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 15%;
+        height: 30%;
+        word-wrap: break-word;
+    }
+    #aboutme{
+        font-size: 14px;
+        word-wrap: break-word;
+        position: fixed;    
+    }
+    #JF{
+        padding: 1%;
+        justify-content: center;
+        text-align: center;
+    }
     
 }
