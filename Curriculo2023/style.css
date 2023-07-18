@@ -78,6 +78,9 @@ li{
 #contato{
     display: flex; flex-direction: row; justify-content: space-between; align-items: center; height: 100%; width: 100%;
 }
+.arru{
+    
+}
 @media only screen and (max-width: 542px ) {
     #S,header{
         display: flex;
@@ -115,4 +118,15 @@ li{
         display: flex; flex-direction: column; justify-content: center; align-items:center; height: 100%; width: 100%;
     }
 }
+  }
+
+  @media only screen and (max-width: 542px ){
+    .arru{
+        width: 99.5%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
   }
