@@ -23,6 +23,7 @@ body,html{
   ::-webkit-scrollbar-thumb:hover {
     background:#334FCC;
   }
+
   @media only screen and (min-width: 543px) {
 header{
     padding: 5%;
@@ -74,15 +75,15 @@ h2{
 li{
     font-size: 20px;
 }
-}
-@media screen {
-    
+#contato{
+    display: flex; flex-direction: row; justify-content: space-between; align-items: center; height: 100%; width: 100%;
 }
 @media only screen and (max-width: 542px ) {
     #S,header{
         display: flex;
         flex-direction: column;
-        justify-content: start;
+        justify-content: center;
+        text-align: start;
         align-items: start;
         width: 15%;
         height: 30%;
@@ -92,11 +93,26 @@ li{
         font-size: 14px;
         word-wrap: break-word;
         position: fixed;    
+        height: 80%;
+        width: max-content;
     }
     #JF{
         padding: 1%;
         justify-content: center;
         text-align: center;
     }
-    
+    #imgexp{
+        padding: 0%;
+    }
+    #CE{
+        padding: 10%;
+    }
+    #BSAI{
+        height: 10;
+        width: 100%;
+    }
+    #contato{
+        display: flex; flex-direction: column; justify-content: center; align-items:center; height: 100%; width: 100%;
+    }
 }
+  }
